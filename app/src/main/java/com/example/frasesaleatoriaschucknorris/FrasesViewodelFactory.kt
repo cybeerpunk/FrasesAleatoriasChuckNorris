@@ -10,7 +10,7 @@ class FrasesViewodelFactory constructor(private val repository: ListFrasesReposi
                 if (modelClass.isAssignableFrom(FrasesViewModel::class.java)){
                     return FrasesViewModel(repository) as T
                 }else{
-                    throw java.lang.IllegalArgumentException("ViewMoel Not Found!")
+                    throw IllegalArgumentException("ViewMoel Not Found!")
                 }
             }
 }

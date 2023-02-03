@@ -8,8 +8,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class FrasesViewModel(val mRepository: ListFrasesRepository) : ViewModel() {
-    private var _listFrasesDTO = MutableLiveData <List<ListFrasesDTO>>()
+class FrasesViewModel(private val mRepository: ListFrasesRepository) : ViewModel() {
+    private var _listFrasesDTO = MutableLiveData<List<ListFrasesDTO>>()
     val mListFrasesDTO: LiveData<List<ListFrasesDTO>> get() = _listFrasesDTO
 
     private var _response = MutableLiveData<String>()
@@ -18,7 +18,7 @@ class FrasesViewModel(val mRepository: ListFrasesRepository) : ViewModel() {
     fun getListFrases(query: String) {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                _listFrasesDTO.postValue(mRepository.getListFrases(query))
+                _listFrasesDTO.postValue(mRepository.responseArrayObject(query))
             } catch (e: Exception) {
                 _response.postValue(e.message.toString())
             }
