@@ -8,4 +8,7 @@ class FrasesREST : BaseREST<IFrasesREST>(IFrasesREST::class.java){
     fun getListFrases(query: String): Call<ObjectListDTO> {
         return service.getListFrases(query)
     }
+    fun getValueFrase(): Call<ListFrasesDTO>{
+        return service.getValueFrase()
+    }
 }

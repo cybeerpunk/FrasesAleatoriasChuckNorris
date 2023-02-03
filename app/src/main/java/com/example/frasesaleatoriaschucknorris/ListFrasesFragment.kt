@@ -34,6 +34,7 @@ class ListFrasesFragment : Fragment() {
 
         getListFrases()
         searchFrases()
+        getValueFrase()
 
 
     }
@@ -62,10 +63,7 @@ class ListFrasesFragment : Fragment() {
     fun getListFrases() {
         mParent.mModel.mListFrasesDTO.observe(viewLifecycleOwner) {
             mListFrasesDTO = it
-            if(mBinding.recycleViewListFrases.isVisible){
-                Toast.makeText(requireContext(), "É visivel!", Toast.LENGTH_LONG).show()
-            }
-          //  mBinding.recycleViewListFrases.visibility = View.VISIBLE
+            //  mBinding.recycleViewListFrases.visibility = View.VISIBLE
             setupAdapter()
         }
     }
@@ -79,6 +77,12 @@ class ListFrasesFragment : Fragment() {
                 Toast.makeText(requireContext(), "Informe uma palavra para a busca de frases!", Toast.LENGTH_SHORT).show()
             }
 
+        }
+    }
+
+    fun getValueFrase(){
+        mParent.mModel.mValueFraseDTO.observe(viewLifecycleOwner){
+         mBinding.textViewFraseAleatoria.text = it.value
         }
     }
 

@@ -29,4 +29,13 @@ class ListFrasesRepository {
         }
         return array
     }
+
+    fun getValueFrase(): ListFrasesDTO {
+        val response = FrasesREST()
+            .getValueFrase()
+            .execute()
+        if (response.code() != 200 && response.code() != 201)
+            throw FrasesException.fromHTTPErrorBody(response.errorBody())
+        return response.body()!!
+    }
 }
