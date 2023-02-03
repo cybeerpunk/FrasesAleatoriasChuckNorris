@@ -22,8 +22,10 @@ class MainActivity : AppCompatActivity() {
             FrasesViewodelFactory(ListFrasesRepository())
         )[FrasesViewModel::class.java]
 
+        mModel.getValueFrase()
         setAdapterFragment()
         catchErrorMessege()
+
 
     }
 

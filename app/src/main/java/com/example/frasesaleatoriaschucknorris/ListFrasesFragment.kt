@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.frasesaleatoriaschucknorris.databinding.FragmentListFrasesBinding
 
@@ -33,6 +34,7 @@ class ListFrasesFragment : Fragment() {
 
         getListFrases()
         searchFrases()
+        getValueFrase()
 
 
     }
@@ -61,7 +63,7 @@ class ListFrasesFragment : Fragment() {
     fun getListFrases() {
         mParent.mModel.mListFrasesDTO.observe(viewLifecycleOwner) {
             mListFrasesDTO = it
-            mBinding.recycleViewListFrases.visibility = View.VISIBLE
+            //  mBinding.recycleViewListFrases.visibility = View.VISIBLE
             setupAdapter()
         }
     }
@@ -75,6 +77,12 @@ class ListFrasesFragment : Fragment() {
                 Toast.makeText(requireContext(), "Informe uma palavra para a busca de frases!", Toast.LENGTH_SHORT).show()
             }
 
+        }
+    }
+
+    fun getValueFrase(){
+        mParent.mModel.mValueFraseDTO.observe(viewLifecycleOwner){
+         mBinding.textViewFraseAleatoria.text = it.value
         }
     }
 

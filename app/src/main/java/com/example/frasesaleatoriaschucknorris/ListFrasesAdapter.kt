@@ -11,7 +11,7 @@ class ListFrasesAdapter(val mContext: Context, val aListFrases: List<ListFrasesD
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListFrasesViewHolder {
         val lBinding =
             RecyclerViewListFrasesBinding.inflate(LayoutInflater.from(mContext), parent, false)
-        return ListFrasesViewHolder(lBinding)
+        return ListFrasesViewHolder(lBinding, mContext)
     }
 
     override fun onBindViewHolder(holder: ListFrasesViewHolder, position: Int) {
