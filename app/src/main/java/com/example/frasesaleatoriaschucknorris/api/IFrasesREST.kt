@@ -10,7 +10,7 @@ import retrofit2.http.Query
 interface IFrasesREST {
     @GET("https://api.chucknorris.io/jokes/search/")
     fun getListFrases(
-        @Query("query") query: String?
+        @Query("query") query: String
     ): Call<ObjectListDTO>
 
     @GET ("https://api.chucknorris.io/jokes/random/")

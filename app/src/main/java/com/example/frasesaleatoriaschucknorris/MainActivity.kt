@@ -7,6 +7,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.frasesaleatoriaschucknorris.api.ListFrasesRepository
 import com.example.frasesaleatoriaschucknorris.databinding.ActivityMainBinding
 import com.example.frasesaleatoriaschucknorris.framework.ScreenSlidePagerAdapter
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
 
 class MainActivity : AppCompatActivity() {
     lateinit var mBinding: ActivityMainBinding
@@ -25,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         mModel.getValueFrase()
         setAdapterFragment()
         catchErrorMessege()
+        startKoin{
+            androidLogger()
+            androidContext(this@MainActivity)
+            modules(frasesModule)
+
+        }
 
 
     }
@@ -32,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     fun setAdapterFragment(){
         val lAdapter = ScreenSlidePagerAdapter(supportFragmentManager, lifecycle)
         lAdapter.addFragment(ListFrasesFragment())
+        lAdapter.addFragment(CadastroFragment())
         mBinding.viewPagerMain.adapter = lAdapter
     }
 
@@ -39,5 +49,10 @@ class MainActivity : AppCompatActivity() {
         mModel.mResponse.observe(this){
             Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
         }
+    }
+
+    fun goToPage(aPageToGo: Int){
+        mBinding.viewPagerMain.setCurrentItem(aPageToGo, false)
+
     }
 }
