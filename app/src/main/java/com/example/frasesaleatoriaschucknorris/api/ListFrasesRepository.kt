@@ -1,16 +1,15 @@
 package com.example.frasesaleatoriaschucknorris.api
 
 
-import com.example.frasesaleatoriaschucknorris.FrasesREST
-import com.example.frasesaleatoriaschucknorris.ListFrasesDTO
-import com.example.frasesaleatoriaschucknorris.ObjectListDTO
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
+import com.example.frasesaleatoriaschucknorris.dto.ObjectListDTO
 import com.example.frasesaleatoriaschucknorris.exception.FrasesException
 
 
 class ListFrasesRepository {
 
 
-    fun getListFrases(query: String): ObjectListDTO  {
+    fun getListFrases(query: String): ObjectListDTO {
     val response = FrasesREST()
         .getListFrases(query)
         .execute()

@@ -1,4 +1,4 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.dto
 
 import android.net.Uri
 

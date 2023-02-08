@@ -1,9 +1,10 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.frasesaleatoriaschucknorris.api.ListFrasesRepository
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

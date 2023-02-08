@@ -6,7 +6,12 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.frasesaleatoriaschucknorris.api.ListFrasesRepository
 import com.example.frasesaleatoriaschucknorris.databinding.ActivityMainBinding
+import com.example.frasesaleatoriaschucknorris.fragment.CadastroFragment
+import com.example.frasesaleatoriaschucknorris.fragment.ListFrasesFragment
 import com.example.frasesaleatoriaschucknorris.framework.ScreenSlidePagerAdapter
+import com.example.frasesaleatoriaschucknorris.main.FrasesViewModel
+import com.example.frasesaleatoriaschucknorris.main.FrasesViewodelFactory
+import com.example.frasesaleatoriaschucknorris.main.frasesModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

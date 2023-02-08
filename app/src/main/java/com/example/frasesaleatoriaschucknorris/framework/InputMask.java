@@ -1,4 +1,4 @@
-package com.example.frasesaleatoriaschucknorris;
+package com.example.frasesaleatoriaschucknorris.framework;
 
 import android.text.Editable;
 import android.text.TextWatcher;

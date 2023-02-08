@@ -1,4 +1,4 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.fragment
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -11,7 +11,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.frasesaleatoriaschucknorris.broadcast.BroadcastFrasesNorris
+import com.example.frasesaleatoriaschucknorris.main.ListFrasesAdapter
+import com.example.frasesaleatoriaschucknorris.MainActivity
 import com.example.frasesaleatoriaschucknorris.databinding.FragmentListFrasesBinding
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
 import com.google.gson.Gson
 
 

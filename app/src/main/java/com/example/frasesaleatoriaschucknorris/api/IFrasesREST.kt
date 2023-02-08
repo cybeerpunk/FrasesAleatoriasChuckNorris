@@ -1,8 +1,8 @@
 package com.example.frasesaleatoriaschucknorris.api
 
 
-import com.example.frasesaleatoriaschucknorris.ListFrasesDTO
-import com.example.frasesaleatoriaschucknorris.ObjectListDTO
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
+import com.example.frasesaleatoriaschucknorris.dto.ObjectListDTO
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

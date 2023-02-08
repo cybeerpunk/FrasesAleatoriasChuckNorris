@@ -1,4 +1,4 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

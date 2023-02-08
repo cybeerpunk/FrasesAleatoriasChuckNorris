@@ -1,4 +1,4 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
 object CadastroBO {
     fun checkCadastroInformation(aNome: String, aSobrenome: String, aTelefone: String, aEmail: String, aCPF: String){

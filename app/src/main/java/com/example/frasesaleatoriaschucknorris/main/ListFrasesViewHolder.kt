@@ -1,17 +1,15 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
 
-import android.annotation.TargetApi
 import android.content.Context
-import android.os.Build
-import android.view.View
-import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.frasesaleatoriaschucknorris.broadcast.BroadcastFrasesNorris
 import com.example.frasesaleatoriaschucknorris.databinding.RecyclerViewListFrasesBinding
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
 import org.koin.java.KoinJavaComponent
 
 class ListFrasesViewHolder(

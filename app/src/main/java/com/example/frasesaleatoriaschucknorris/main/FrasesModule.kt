@@ -1,5 +1,6 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
+import com.example.frasesaleatoriaschucknorris.broadcast.BroadcastFrasesNorris
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

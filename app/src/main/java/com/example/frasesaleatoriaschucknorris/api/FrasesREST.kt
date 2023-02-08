@@ -1,7 +1,7 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.api
 
-import com.example.frasesaleatoriaschucknorris.api.BaseREST
-import com.example.frasesaleatoriaschucknorris.api.IFrasesREST
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
+import com.example.frasesaleatoriaschucknorris.dto.ObjectListDTO
 import retrofit2.Call
 
 class FrasesREST : BaseREST<IFrasesREST>(IFrasesREST::class.java){

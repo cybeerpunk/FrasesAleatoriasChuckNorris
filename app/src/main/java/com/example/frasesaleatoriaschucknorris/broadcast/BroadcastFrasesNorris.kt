@@ -1,7 +1,8 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.broadcast
 
 import android.content.Context
 import android.content.Intent
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
 import com.google.gson.Gson
 
 class BroadcastFrasesNorris(val mContext: Context) {

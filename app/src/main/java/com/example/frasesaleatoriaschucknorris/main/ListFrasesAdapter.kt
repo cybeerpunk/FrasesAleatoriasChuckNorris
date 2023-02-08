@@ -1,10 +1,11 @@
-package com.example.frasesaleatoriaschucknorris
+package com.example.frasesaleatoriaschucknorris.main
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.frasesaleatoriaschucknorris.databinding.RecyclerViewListFrasesBinding
+import com.example.frasesaleatoriaschucknorris.dto.ListFrasesDTO
 
 class ListFrasesAdapter(val mContext: Context, val aListFrases: List<ListFrasesDTO>) :
     RecyclerView.Adapter<ListFrasesViewHolder>() {
