@@ -80,7 +80,6 @@ class CadastroFragment : Fragment() {
                 if (mBinding.spinnerEscolaridade.selectedItem.toString() == "Selecione a sua escolaridade:")
                     throw Exception("Informe sua categoria")
 
-//
 
                 val lTitulo = "Cadastro validado"
                 val lOpenIntent = Intent(context, MainActivity::class.java)
@@ -132,7 +131,7 @@ class CadastroFragment : Fragment() {
 
     fun populateSpinner() {
         val lAdapterFamiliaridade: List<String> = FrasesCommons.getListFamiliaridade()
-        val lSetAdapter =
+        val lSetFamiliaridadeAdapter =
             StringSpinnerAdapter(
                 requireContext(),
                 R.id.textViewBasicStringItem,
@@ -148,7 +147,7 @@ class CadastroFragment : Fragment() {
             )
 
 
-        mBinding.spinnerFamiliaridade.adapter = lSetAdapter
+        mBinding.spinnerFamiliaridade.adapter = lSetFamiliaridadeAdapter
         mBinding.spinnerEscolaridade.adapter = lSetEscolaridadeAdapter
     }
 
